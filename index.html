@@ -1,0 +1,1414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Build 2026-11-06-final: finished site (RUAA™, ankh thumbnail, Gmail booking). Republished to replace any cached first-version copy. -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="RUAA — official site. Seven releases on CMMG Records, cinematic videos, and the drums of Robbie Rodriguez. Booking through Canales Music Management Group LLC." />
+    <link rel="icon" href="data:," />
+    <title>RUAA™ — Official Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0a0a0c;
+        --bg-2: #101013;
+        --surface: #15151a;
+        --surface-2: #1b1b21;
+        --ink: #ece7db;
+        --ink-soft: #b7b1a4;
+        --ink-faint: #8a8578;
+        --gold: #c9a24d;
+        --gold-bright: #e6c87a;
+        --gold-deep: #8f6f27;
+        --line: #26262d;
+        --scrim: rgba(5, 5, 7, 0.72);
+        --header-bg: rgba(10, 10, 12, 0.86);
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f2f0eb;
+          --bg-2: #eae7df;
+          --surface: #ffffff;
+          --surface-2: #f7f5f0;
+          --ink: #191920;
+          --ink-soft: #4c4a44;
+          --ink-faint: #767268;
+          --gold: #96742a;
+          --gold-bright: #7d5f1e;
+          --gold-deep: #96742a;
+          --line: #d9d4c7;
+          --scrim: rgba(5, 5, 7, 0.72);
+          --header-bg: rgba(242, 240, 235, 0.88);
+          --shadow: 0 18px 44px rgba(30, 28, 20, 0.16);
+          color-scheme: light;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; display: block; }
+      .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+      a { color: inherit; }
+      h1, h2, h3 { font-family: "Cinzel", Georgia, serif; line-height: 1.15; margin: 0; }
+      .wrap { width: min(1180px, 100% - 40px); margin-inline: auto; }
+      section { padding: 84px 0; }
+      .section-head { max-width: 640px; margin-bottom: 40px; }
+      .section-head h2 { font-size: clamp(30px, 4.4vw, 44px); font-weight: 700; letter-spacing: 0.01em; }
+      .section-head p { color: var(--ink-soft); margin: 12px 0 0; }
+      .rule { width: 64px; height: 2px; background: var(--gold); margin-bottom: 20px; }
+
+      /* ---------- Header ---------- */
+      header {
+        position: fixed; inset: 0 0 auto 0; z-index: 50;
+        background: var(--header-bg);
+        backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+      .header-in { display: flex; align-items: center; gap: 28px; height: 76px; }
+      .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; flex: none; }
+      .brand img { height: 52px; width: auto; }
+      @media (prefers-color-scheme: light) {
+        .brand img, .footer-logo { filter: invert(1); }
+        .hero .brand-mark { filter: none; }
+      }
+      .brand span { font-family: "Cinzel", serif; font-weight: 700; letter-spacing: 0.22em; font-size: 15px; color: var(--ink-soft); }
+      nav.main { margin-left: auto; display: flex; align-items: center; gap: 26px; }
+      nav.main a { text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+      nav.main a:hover { color: var(--gold-bright); }
+      .btn {
+        display: inline-flex; align-items: center; gap: 10px;
+        font-weight: 700; font-size: 15px; letter-spacing: 0.04em;
+        text-decoration: none; border-radius: 6px; padding: 13px 24px;
+        transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+      }
+      .btn-gold { background: var(--gold); color: #131007; }
+      .btn-gold:hover { background: var(--gold-bright); }
+      .btn-ghost { border: 1px solid rgba(236, 231, 219, 0.45); color: #ece7db; background: rgba(10, 10, 12, 0.25); }
+      .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+      .btn-small { padding: 9px 18px; font-size: 13.5px; }
+      @media (max-width: 760px) {
+        nav.main a:not(.btn) { display: none; }
+        .brand span { display: none; }
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        /* Top padding clears the fixed header, so the header never overlaps
+           the logo artwork. */
+        padding: 76px 0 0;
+        position: relative;
+        display: flex; flex-direction: column;
+        color: #ece7db; overflow: hidden; background: #000;
+      }
+      /* The front-page logo is Robbie's supplied artwork, displayed as its
+         own element — never a background, never cover-cropped. It scales
+         down to fit its padded frame whole (contain), so every letter and
+         flourish stays inside the visible area at any screen width. */
+      .hero-media {
+        padding: clamp(18px, 4vw, 40px) clamp(16px, 4vw, 40px) 10px;
+      }
+      .hero-media img.hero-logo {
+        width: 100%; height: auto;
+        object-fit: contain; object-position: center center;
+      }
+      /* The ™ beside the logo is page-rendered text, NOT part of the
+         artwork — Robbie's logo file stays byte-for-byte untouched.
+         The wrap is pinned to the image's exact rendered width, so its
+         percentages ARE image percentages at every screen size.
+         Robbie's spec: the ™ sits at the final A's LOWER RIGHT, tight
+         beside it with its bottom near the A's baseline — but FULLY
+         clear of the lettering, on black, with a small visible gap.
+         Measured on the artwork itself (1029x739), the A's lower-right
+         flourish is the trap: its tail sweeps right to x ≈ 90.2% at
+         y ≈ 63.6% before curving down into a small hook whose right
+         edge reaches only x ≈ 88.0% (y 65–71%). The previous spot
+         (left 89.5% / top 63%) put the ™'s ink at y ≈ 63.7–65.1%,
+         where the tail still reaches x ≈ 90% — so the glyph's left
+         edge landed ON the white tail and read partly hidden.
+         Fix: top 66% / left 89.8% drops the ink to y ≈ 66.6–68.1%
+         (desktop; ≈ 66.9–68.7% on phone), beside the hook, where no
+         artwork pixel extends past x = 88.0%. The ink (Cinzel ™:
+         0.467em wide, starting at the span's left edge) spans
+         x ≈ 89.9–92.2% at every size — a gap of ≈ 1.9% of the wrap
+         width (≈ 15px desktop, ≈ 6px phone) of pure black between
+         lettering and glyph, the whole ™ visible against black,
+         its bottom still down at the A's lower right.
+         Centering: the artwork's own black margins are uneven — the
+         lettering spans x 1.75%–94.46% of the image (visual center
+         48.1%, not 50%). The ™'s ink right edge (≈ 92.2%) stays
+         INSIDE that span, so the lockup's span — and the offset that
+         centers it — is unchanged: the wrap shifts right by 1.9% of
+         its own width, moving artwork and ™ together as one unit so
+         the lockup's visual center lands on the page's center line
+         at every screen size. */
+      .hero-logo-wrap {
+        position: relative; display: block; line-height: 0;
+        width: min(780px, 100%); margin-inline: auto;
+        transform: translateX(1.9%);
+      }
+      .logo-tm {
+        position: absolute; top: 66%; left: 89.8%;
+        font-family: "Cinzel", Georgia, serif; font-weight: 700;
+        font-size: clamp(22px, 4.5vw, 38px); line-height: 1;
+        color: #fff; pointer-events: none;
+      }
+      @media (max-width: 760px) {
+        .hero-media { padding: 20px 16px 6px; }
+        .hero-in { padding: 18px 0 4px; }
+        .hero-strip { margin-top: 30px; }
+      }
+      .hero-in { position: relative; z-index: 2; text-align: center; padding: 10px 0 8px; }
+      .ep-line {
+        margin: 0 auto; font-family: "Cinzel", serif; text-align: center;
+        font-size: clamp(19px, 3vw, 27px); font-weight: 700; letter-spacing: 0.05em; color: #ece7db;
+      }
+      .ep-line .ep-name { color: var(--gold-bright); }
+      .ep-line .ep-label { display: block; margin-top: 6px; font-size: clamp(12.5px, 1.6vw, 15px); font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #b7b1a4; }
+      .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+      .hero-strip {
+        position: relative; z-index: 2; margin-top: 56px;
+        border-top: 1px solid rgba(236, 231, 219, 0.16);
+        background: rgba(6, 6, 8, 0.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      }
+      .hero-strip-in { display: flex; align-items: center; gap: 18px; padding: 16px 0; }
+      /* The strip thumbnail is the 16:9 Option B still (Anubis raising the
+         ankh) squeezed into a 58px square. A plain center crop clips the
+         full moon at the frame's right edge and pushes Anubis low-left.
+         object-position 62% slides the square window right (source x
+         ≈ 27%–83% of the 2048px still) so the whole composition survives
+         the crop: Anubis's head at the left, the raised ankh centered,
+         and the full moon inside the frame at the top right. */
+      .hero-strip img { width: 58px; height: 58px; border-radius: 6px; object-fit: cover; object-position: 62% 50%; flex: none; }
+      .hero-strip .hs-text { min-width: 0; }
+      .hero-strip .hs-kicker { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-bright); }
+      .hero-strip .hs-title { font-family: "Cinzel", serif; font-size: 19px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .hero-strip .hs-sub { font-size: 13.5px; color: #b7b1a4; }
+      .hero-strip .btn { margin-left: auto; flex: none; }
+      @media (max-width: 560px) {
+        .hero-strip .hs-sub { display: none; }
+        .hero-strip .btn { padding: 9px 14px; font-size: 13px; }
+      }
+
+      /* ---------- Spotlight ---------- */
+      .spotlight { background: var(--bg-2); border-block: 1px solid var(--line); }
+      .spot-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 48px; align-items: center; }
+      .spot-cover { border-radius: 10px; box-shadow: var(--shadow); width: 100%; aspect-ratio: 1; object-fit: cover; }
+      .chip {
+        display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--gold-deep); border: 1px solid var(--gold); border-radius: 999px; padding: 4px 12px;
+      }
+      @media (prefers-color-scheme: dark) { .chip { color: var(--gold-bright); } }
+      .spot-copy h2 { font-size: clamp(32px, 4.6vw, 48px); margin: 18px 0 6px; }
+      .spot-copy .spot-sub { font-family: "Cinzel", serif; font-size: 17px; letter-spacing: 0.06em; color: var(--ink-soft); }
+      .spot-copy p { color: var(--ink-soft); max-width: 52ch; }
+      .facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 22px 0 6px; padding: 0; list-style: none; }
+      .facts li { font-size: 14.5px; color: var(--ink-soft); }
+      .facts b { color: var(--ink); font-weight: 700; }
+      @media (max-width: 860px) { .spot-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+      /* ---------- Player ---------- */
+      .player {
+        display: flex; align-items: center; gap: 14px; margin-top: 24px;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px;
+      }
+      .pbtn {
+        flex: none; width: 46px; height: 46px; border-radius: 50%; border: 0; cursor: pointer;
+        background: var(--gold); color: #131007; display: grid; place-items: center;
+      }
+      .pbtn:hover { background: var(--gold-bright); }
+      .pbtn svg { width: 18px; height: 18px; fill: currentColor; }
+      .pbtn .icon-pause { display: none; }
+      .playing .pbtn .icon-play { display: none; }
+      .playing .pbtn .icon-pause { display: block; }
+      .player .track { flex: 1; min-width: 0; }
+      .player .bar { height: 5px; border-radius: 99px; background: var(--line); overflow: hidden; cursor: pointer; }
+      .player .bar i { display: block; height: 100%; width: 0%; background: var(--gold); border-radius: 99px; }
+      .player .time { font-size: 12.5px; color: var(--ink-faint); font-variant-numeric: tabular-nums; margin-top: 6px; display: flex; justify-content: space-between; }
+      .player .p-title { font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+      /* ---------- Music grid ---------- */
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+      @media (max-width: 960px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+      .card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+        display: flex; flex-direction: column;
+      }
+      .card .cover { aspect-ratio: 1; object-fit: cover; width: 100%; }
+      .card-body { padding: 20px 20px 8px; flex: 1; }
+      .card h3 { font-size: 21px; font-weight: 700; }
+      .card .meta { display: flex; align-items: center; gap: 10px; margin-top: 8px; font-size: 13.5px; color: var(--ink-faint); }
+      .card .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-faint); flex: none; }
+      .card .note { color: var(--ink-soft); font-size: 15px; margin: 10px 0 4px; }
+      .card .note.centered { text-align: center; }
+      .card .player { border: 0; border-top: 1px solid var(--line); border-radius: 0; background: var(--surface-2); margin-top: 14px; padding: 12px 16px 16px; }
+      .tag {
+        font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--gold-deep); border: 1px solid var(--gold); padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+      }
+      @media (prefers-color-scheme: dark) { .tag { color: var(--gold-bright); } }
+      .tag.solid { background: var(--gold); color: #131007; border-color: var(--gold); }
+
+      /* ---------- Videos ---------- */
+      .videos { background: var(--bg-2); border-block: 1px solid var(--line); }
+      .vid-feature { margin-bottom: 26px; }
+      figure.vid { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+      figure.vid video { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
+      figure.vid.portrait video { aspect-ratio: 4 / 5; }
+      figure.vid.square video { aspect-ratio: 1 / 1; }
+      /* Vertical Shorts (9:16) — on phones the card is capped and centered
+         so the tall frame doesn't run away down the page. */
+      figure.vid.vertical video { aspect-ratio: 9 / 16; }
+      @media (max-width: 640px) {
+        figure.vid.vertical { max-width: 420px; width: 100%; margin-inline: auto; }
+      }
+      figcaption { padding: 16px 20px 18px; }
+      figcaption h3 { font-size: 19px; }
+      figcaption p { margin: 6px 0 0; color: var(--ink-soft); font-size: 15px; }
+      /* Widescreen films only, on a 6-track grid: three cards per row at
+         span 2; a closing row of two widens to span 3 each, so no row is
+         left with an empty slot and every gap stays the same 26px. */
+      .vid-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 26px; }
+      .vid-grid > figure.vid { grid-column: span 2; }
+      .vid-grid > figure.vid:nth-child(4),
+      .vid-grid > figure.vid:nth-child(5) { grid-column: span 3; }
+      @media (max-width: 960px) {
+        .vid-grid { grid-template-columns: 1fr 1fr; }
+        .vid-grid > figure.vid,
+        .vid-grid > figure.vid:nth-child(4),
+        .vid-grid > figure.vid:nth-child(5) { grid-column: auto; }
+        .vid-grid > figure.vid:last-child { grid-column: 1 / -1; }
+      }
+      @media (max-width: 640px) {
+        .vid-grid { grid-template-columns: 1fr; }
+        .vid-grid > figure.vid:last-child { grid-column: auto; }
+      }
+      /* The two odd-format films pair in their own centered row: columns
+         in a 16:9 ratio make the square (1:1) and vertical (9:16) frames
+         exactly the same height, so the row reads even instead of one
+         tall card towering over the other. */
+      .vid-duo { display: grid; grid-template-columns: 16fr 9fr; gap: 26px; max-width: 840px; margin: 26px auto 0; }
+      @media (max-width: 720px) {
+        .vid-duo { grid-template-columns: 1fr; max-width: none; }
+        .vid-duo figure.vid.vertical { max-width: 420px; width: 100%; margin-inline: auto; }
+      }
+
+      /* ---------- Click-to-play (every video fires on click) ---------- */
+      /* The overlay is a real button covering the whole poster area, so a
+         click or tap anywhere on the video — not just the small native
+         control — starts playback. It removes itself once playback starts,
+         leaving the native controls in charge. */
+      .vid-frame { position: relative; background: #000; }
+      .vid-play {
+        position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%;
+        margin: 0; padding: 0; border: 0; cursor: pointer;
+        background: rgba(5, 5, 7, 0.18);
+        display: grid; place-items: center;
+      }
+      .vid-play .vid-play-disc {
+        width: 76px; height: 76px; border-radius: 50%;
+        background: var(--gold); color: #131007;
+        display: grid; place-items: center;
+        box-shadow: 0 12px 34px rgba(0, 0, 0, 0.55);
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+      .vid-play .vid-play-disc svg { width: 28px; height: 28px; fill: currentColor; margin-left: 4px; }
+      .vid-play:hover .vid-play-disc, .vid-play:focus-visible .vid-play-disc { background: var(--gold-bright); transform: scale(1.06); }
+      .vid-play:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: -2px; }
+      .vid-play .vid-play-text {
+        position: absolute; left: 0; right: 0; bottom: 14px;
+        text-align: center; font-size: 12.5px; font-weight: 700;
+        letter-spacing: 0.18em; text-transform: uppercase; color: #ece7db;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
+      }
+      .vid-play[hidden] { display: none; }
+      /* YouTube auditions embed: click-to-load facade. The iframe is only
+         created, with autoplay, after the visitor clicks — so the click
+         itself starts the video instead of depending on a pre-loaded
+         third-party player responding. */
+      .yt-facade {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        margin: 0; padding: 0; border: 0; cursor: pointer;
+        background: radial-gradient(120% 130% at 50% 0%, #26221a 0%, #101013 55%, #060607 100%);
+        color: #ece7db; display: grid; place-items: center; text-align: center;
+      }
+      .yt-facade .vid-play-disc {
+        width: 76px; height: 76px; border-radius: 50%; margin-inline: auto;
+        background: var(--gold); color: #131007; display: grid; place-items: center;
+        box-shadow: 0 12px 34px rgba(0, 0, 0, 0.55);
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+      .yt-facade .vid-play-disc svg { width: 28px; height: 28px; fill: currentColor; margin-left: 4px; }
+      .yt-facade:hover .vid-play-disc, .yt-facade:focus-visible .vid-play-disc { background: var(--gold-bright); transform: scale(1.06); }
+      .yt-facade:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: -2px; }
+      .yt-facade .yt-facade-title { display: block; margin-top: 18px; font-family: "Cinzel", serif; font-size: clamp(18px, 3vw, 24px); font-weight: 700; padding: 0 20px; }
+      .yt-facade .yt-facade-sub { display: block; margin-top: 6px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-bright); }
+
+      /* ---------- Theater (Expand) mode ---------- */
+      /* True fullscreen is blocked by the host frame, so Expand is done
+         in-page: the video's host becomes a fixed full-viewport stage.
+         The video keeps its native controls and playback state; only its
+         size changes. A same-height placeholder holds the page layout
+         while the host is lifted out of flow. */
+      .vid-actions { display: flex; justify-content: flex-end; margin-top: 12px; }
+      .theater-btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        font-family: inherit; font-size: 13.5px; font-weight: 700; letter-spacing: 0.04em;
+        color: var(--ink); background: var(--surface-2);
+        border: 1px solid var(--line); border-radius: 6px;
+        padding: 9px 16px; cursor: pointer; min-height: 44px;
+      }
+      .theater-btn:hover { border-color: var(--gold); color: var(--gold-deep); }
+      @media (prefers-color-scheme: dark) { .theater-btn:hover { color: var(--gold-bright); } }
+      .theater-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+      .theater-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+      .theater-btn .icon-shrink { display: none; }
+      .theater .theater-btn .icon-expand { display: none; }
+      .theater .theater-btn .icon-shrink { display: block; }
+      .theater-placeholder { visibility: hidden; }
+      body.theater-open { overflow: hidden; }
+      figure.vid.theater {
+        position: fixed; inset: 0; z-index: 160;
+        display: flex; flex-direction: column;
+        background: #000; border: 0; border-radius: 0; box-shadow: none;
+      }
+      figure.vid.theater .vid-frame { flex: 1 1 auto; min-height: 0; width: 100%; }
+      figure.vid.theater video {
+        width: 100%; height: 100%; aspect-ratio: auto; object-fit: contain; background: #000;
+      }
+      figure.vid.theater figcaption {
+        flex: none; display: flex; align-items: center; gap: 16px;
+        background: #0a0a0c; color: #ece7db;
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      }
+      figure.vid.theater figcaption h3 { flex: 1 1 auto; min-width: 0; font-size: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      figure.vid.theater figcaption p { display: none; }
+      figure.vid.theater figcaption .vid-actions { margin-top: 0; flex: none; }
+      figure.vid.theater .theater-btn { background: #1b1b21; border-color: rgba(236, 231, 219, 0.35); color: #ece7db; }
+      .yt-theater-host.theater {
+        position: fixed; inset: 0; z-index: 160;
+        display: flex; flex-direction: column;
+        background: #000;
+      }
+      .yt-theater-host.theater .yt-wrap {
+        flex: 1 1 auto; min-height: 0; height: auto;
+        margin-top: 0; aspect-ratio: auto; border-radius: 0; box-shadow: none;
+      }
+      .yt-theater-host.theater .vid-actions {
+        flex: none; margin-top: 0; background: #0a0a0c;
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      }
+      .yt-theater-host.theater .theater-btn { background: #1b1b21; border-color: rgba(236, 231, 219, 0.35); color: #ece7db; }
+      @media (max-width: 560px) {
+        figure.vid.theater figcaption h3 { font-size: 15px; }
+      }
+
+      /* ---------- About ---------- */
+      .about-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 48px; align-items: start; }
+      @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 32px; } }
+      .about-photo { border-radius: 12px; box-shadow: var(--shadow); width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 22%; }
+      .about-copy h2 { font-size: clamp(30px, 4.4vw, 44px); margin-bottom: 16px; }
+      .about-copy p { color: var(--ink-soft); max-width: 56ch; }
+      .about-copy p strong { color: var(--ink); }
+      .specs { margin: 26px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .specs li { display: flex; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; }
+      .specs li b { font-family: "Cinzel", serif; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); width: 118px; flex: none; padding-top: 3px; }
+      @media (prefers-color-scheme: dark) { .specs li b { color: var(--gold-bright); } }
+      .specs li span { color: var(--ink-soft); }
+      .specs li span strong { color: var(--ink); }
+      .bio-quote { margin: 22px 0; font-size: 18.5px; font-style: italic; line-height: 1.55; color: var(--ink); max-width: 56ch; }
+      .bio-lists { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; margin-top: 52px; align-items: start; }
+      @media (max-width: 860px) { .bio-lists { grid-template-columns: 1fr; } }
+      .bio-list { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px 18px; }
+      .bio-list h3 { font-size: 17px; letter-spacing: 0.04em; margin-bottom: 9px; }
+      .bio-list ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; color: var(--ink-soft); font-size: 15px; }
+      .bio-list ul.cols-2 { grid-template-columns: 1fr 1fr; column-gap: 16px; }
+      .bio-list ul b { color: var(--ink); font-weight: 600; }
+      .bio-list li.member { display: grid; gap: 10px; }
+      .bio-list li.member img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 30%; border-radius: 8px; }
+      /* The band card spans the full width beneath the Endorsements and Kit
+         boxes, with the six member photos in a grid inside it. */
+      .bio-list.band-card { grid-column: 1 / -1; }
+      .bio-list ul.members { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      @media (max-width: 860px) { .bio-list ul.members { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 560px) { .bio-list ul.members { grid-template-columns: 1fr; } }
+      /* Danielle's headshot is a tall 304x590 portrait whose face runs from
+         ~21% to ~67% of the frame height — too tall for the 4/3 crop — so
+         her photo uses a square frame centered on her face (38%), keeping
+         hairline to chin fully in view (crop verified against the source). */
+      .bio-list li.member img.face-frame { aspect-ratio: 1 / 1; object-position: center 38%; }
+      /* Jimmy's new roster photo is the tall 1088x2048 RockEyez interview
+         poster. In the standard 4/3 roster frame only ~40% of its height
+         shows; his head (hairline to beard) runs ~6.5% to ~44% of the
+         poster, so anchoring the crop at 8% shows ~4.8% to ~44.6% — his
+         whole face, with the poster text below the frame. Clicking still
+         opens the complete, uncropped poster in the lightbox. */
+      .bio-list li.member img.jimmy-face { object-position: center 8%; }
+      .hire-card { margin: 48px auto 0; max-width: 430px; }
+      .hire-card img { width: 100%; border-radius: 12px; box-shadow: var(--shadow); }
+      .audition { margin: 52px auto 0; max-width: 760px; }
+      .audition h3 { font-size: 24px; text-align: center; }
+      .audition p { color: var(--ink-soft); font-size: 15.5px; text-align: center; max-width: 58ch; margin: 10px auto 0; }
+      .audition p a { color: var(--gold-deep); font-weight: 600; }
+      @media (prefers-color-scheme: dark) { .audition p a { color: var(--gold-bright); } }
+      .yt-wrap { position: relative; margin-top: 20px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); background: #000; aspect-ratio: 16 / 9; }
+      .yt-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+      .prod-line { margin-top: 26px; color: var(--ink-soft); font-size: 15.5px; }
+      .prod-line a { color: var(--gold-deep); font-weight: 600; }
+      @media (prefers-color-scheme: dark) { .prod-line a { color: var(--gold-bright); } }
+
+      /* ---------- Gallery ---------- */
+      .gallery { background: var(--bg-2); border-block: 1px solid var(--line); }
+      .gal-banner { border-radius: 12px; overflow: hidden; margin-bottom: 26px; position: relative; }
+      .gal-banner img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
+      .gal-banner figcaption {
+        position: absolute; left: 0; right: 0; bottom: 0; padding: 44px 22px 16px; color: #ece7db;
+        background: linear-gradient(180deg, transparent, rgba(5,5,7,0.82));
+        font-size: 14.5px;
+      }
+      .gal-banner figcaption b { font-family: "Cinzel", serif; letter-spacing: 0.05em; }
+      .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      @media (max-width: 960px) { .gal-grid { grid-template-columns: repeat(2, 1fr); } }
+      .band-shot { margin: 52px 0 0; }
+      .band-shot img { width: 100%; aspect-ratio: 21 / 10; object-fit: cover; object-position: center 38%; border-radius: 12px; box-shadow: var(--shadow); }
+      .band-shot figcaption { padding: 12px 2px 0; font-size: 14.5px; color: var(--ink-faint); }
+      .gal-grid figure { margin: 0; }
+      .gal-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; }
+      .gal-grid figcaption { padding: 10px 2px 0; font-size: 13.5px; color: var(--ink-faint); }
+      .gal-grid figure.wide { grid-column: 1 / -1; }
+      .gal-grid figure.wide img { aspect-ratio: 2048 / 1474; }
+      .gal-sub { margin: 48px 0 0; }
+      .gal-sub h3 { font-size: 23px; }
+      .gal-sub p { color: var(--ink-soft); margin: 8px 0 0; max-width: 62ch; font-size: 15.5px; }
+      .gal-sub a { color: var(--gold-deep); font-weight: 600; }
+      @media (prefers-color-scheme: dark) { .gal-sub a { color: var(--gold-bright); } }
+      .gal-grid.two { grid-template-columns: repeat(2, 1fr); margin-top: 22px; }
+      .gal-grid figure.ratio43 img { aspect-ratio: 4 / 3; }
+      .gal-grid figure.centered { grid-column: 1 / -1; }
+      .gal-grid figure.centered img { width: min(400px, 100%); margin-inline: auto; aspect-ratio: 4 / 5; }
+      .gal-grid figure.centered figcaption { text-align: center; }
+      @media (max-width: 560px) { .gal-grid.two { grid-template-columns: 1fr; } }
+
+      /* ---------- Lightbox (click any photo to expand) ---------- */
+      .expandable { cursor: zoom-in; }
+      .expandable:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+      @media (hover: hover) {
+        .expandable:hover { filter: brightness(1.06); }
+      }
+      .lightbox {
+        position: fixed; inset: 0; z-index: 200; display: none;
+        background: rgba(4, 4, 6, 0.94);
+        padding: max(18px, env(safe-area-inset-top)) 18px max(18px, env(safe-area-inset-bottom));
+      }
+      .lightbox.open { display: flex; align-items: center; justify-content: center; }
+      .lightbox figure {
+        margin: 0; display: flex; flex-direction: column; align-items: center;
+        max-width: min(1200px, 100%); max-height: 100%; cursor: zoom-out;
+      }
+      .lightbox img {
+        max-width: 100%; max-height: calc(100dvh - 130px);
+        width: auto; height: auto; object-fit: contain;
+        border-radius: 6px; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
+        background: #000;
+      }
+      .lightbox figcaption {
+        padding: 14px 8px 0; color: #ece7db; font-size: 15px; text-align: center;
+        max-width: 70ch; max-height: 84px; overflow: auto;
+      }
+      .lightbox figcaption:empty { display: none; }
+      .lightbox-close {
+        position: absolute; top: max(14px, env(safe-area-inset-top)); right: 16px;
+        width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(236, 231, 219, 0.4);
+        background: rgba(10, 10, 12, 0.72); color: #ece7db; cursor: pointer;
+        display: grid; place-items: center; z-index: 2;
+      }
+      .lightbox-close:hover { border-color: var(--gold); color: var(--gold-bright); }
+      .lightbox-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+      .lightbox-close svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+      .lightbox-hint {
+        position: absolute; left: 0; right: 0; bottom: max(12px, env(safe-area-inset-bottom));
+        text-align: center; font-size: 12.5px; letter-spacing: 0.08em; color: rgba(236, 231, 219, 0.55);
+        pointer-events: none;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .lightbox.open figure { animation: lb-in 0.18s ease-out; }
+        @keyframes lb-in { from { opacity: 0; transform: scale(0.985); } to { opacity: 1; transform: scale(1); } }
+      }
+
+      /* ---------- Booking ---------- */
+      .book-card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+        padding: clamp(28px, 5vw, 52px); display: grid; grid-template-columns: auto 1fr auto; gap: 36px; align-items: center;
+      }
+      @media (max-width: 860px) { .book-card { grid-template-columns: 1fr; text-align: center; justify-items: center; } }
+      .book-card .cmmg-badge { background: #fff; border-radius: 10px; padding: 16px 20px; }
+      .book-card .cmmg-badge img { width: 190px; height: auto; }
+      .book-card h2 { font-size: clamp(26px, 3.6vw, 36px); margin-bottom: 8px; }
+      .book-card p { color: var(--ink-soft); margin: 0; max-width: 46ch; }
+      .book-actions { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+      .book-actions .mail { font-size: 14px; color: var(--ink-faint); text-align: center; word-break: break-all; }
+      .btn-outline { border: 1px solid var(--line); color: var(--ink); background: var(--surface-2); cursor: pointer; justify-content: center; }
+      .btn-outline:hover { border-color: var(--gold); color: var(--gold-deep); }
+      @media (prefers-color-scheme: dark) { .btn-outline:hover { color: var(--gold-bright); } }
+      .copy-note { font-size: 13px; line-height: 1.45; color: var(--ink-faint); text-align: center; max-width: 34ch; margin-inline: auto; }
+      .copy-note.ok { color: var(--gold-deep); font-weight: 600; }
+      @media (prefers-color-scheme: dark) { .copy-note.ok { color: var(--gold-bright); } }
+
+      /* ---------- Footer ---------- */
+      footer { background: #08080a; color: #b7b1a4; padding: 52px 0 40px; }
+      .footer-in { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+      .footer-logo { height: 64px; width: auto; }
+      .footer-cols { margin-left: auto; display: flex; gap: 56px; flex-wrap: wrap; }
+      .footer-cols h4 { font-family: "Cinzel", serif; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #ece7db; margin: 0 0 12px; }
+      .footer-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 14.5px; }
+      .footer-cols a { text-decoration: none; }
+      .footer-cols a:hover { color: var(--gold-bright); }
+      .footer-base { border-top: 1px solid #222228; margin-top: 36px; padding-top: 22px; font-size: 13.5px; color: #8a8578; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap header-in">
+        <a class="brand" href="#top" aria-label="RUAA — back to top">
+          <img src="assets/asset-001.png" alt="RUAA logo" />
+          <span>Official Site</span>
+        </a>
+        <nav class="main" aria-label="Site">
+          <a href="#music">Music</a>
+          <a href="#videos">Videos</a>
+          <a href="#about">The Drummer</a>
+          <a href="#gallery">Gallery</a>
+          <a class="btn btn-gold btn-small" href="#booking">Book RUAA</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="hero-media">
+          <span class="hero-logo-wrap">
+            <img class="hero-logo" src="assets/asset-002.jpg" alt="RUAA™ logo — the band's white gothic RUAA lettering on black" width="1029" height="739" />
+            <span class="logo-tm" aria-hidden="true">™</span>
+          </span>
+        </div>
+        <div class="hero-in wrap">
+          <h1 class="sr-only">RUAA™</h1>
+          <p class="ep-line">The EP <span class="ep-name">&ldquo;Path of the Fallen&rdquo;</span><span class="ep-label">On CMMG Records</span></p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="#music">Listen to the music</a>
+            <a class="btn btn-ghost" href="#videos">Watch the videos</a>
+          </div>
+        </div>
+        <div class="hero-strip">
+          <div class="wrap hero-strip-in">
+            <img src="assets/asset-003.jpg" alt="No Decision thumbnail — Anubis raising a distressed ankh to the full moon over temple ruins" />
+            <div class="hs-text">
+              <div class="hs-kicker">New instrumental single</div>
+              <div class="hs-title">No Decision</div>
+              <div class="hs-sub">Coming soon · 2:47 · scored to the Anubis morph bus film</div>
+            </div>
+            <button class="btn btn-gold" id="heroPlay" type="button">▶ Play it</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SPOTLIGHT ============ -->
+      <section class="spotlight" id="latest">
+        <div class="wrap spot-grid">
+          <div class="reveal">
+            <img class="spot-cover" src="assets/asset-004.jpg" alt="No Decision cover art — the jackal-headed Anubis in gold and black, holding crossed staffs over a field of ankh symbols" />
+          </div>
+          <div class="spot-copy">
+            <span class="chip">Coming soon</span>
+            <h2>No Decision</h2>
+            <div class="spot-sub">The next RUAA release — an instrumental</div>
+            <p>The track takes you on a musical journey to decide who or what we&rsquo;d like to achieve in life. We&rsquo;re making No Decision as we move through time and space to get to our final destination &mdash; no words, just kit, riff and atmosphere, scored to the Anubis morphing.</p>
+            <ul class="facts">
+              <li><b>Format</b>&nbsp; Instrumental single</li>
+              <li><b>Runtime</b>&nbsp; 2:47</li>
+              <li><b>Label</b>&nbsp; CMMG Records</li>
+            </ul>
+            <div class="player" data-player>
+              <button class="pbtn" type="button" aria-label="Play No Decision">
+                <svg class="icon-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 1.5h4v13h-4zM9.5 1.5h4v13h-4z"/></svg>
+              </button>
+              <div class="track">
+                <div class="p-title">No Decision — RUAA</div>
+                <div class="bar" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><i></i></div>
+                <div class="time"><span class="cur">0:00</span><span class="dur">2:47</span></div>
+              </div>
+              <audio preload="none" src="assets/asset-005.mp3"></audio>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MUSIC ============ -->
+      <section id="music">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="rule"></div>
+            <h2>The Music</h2>
+            <p>All seven RUAA releases — full tracks, straight from the streaming masters. Press play.</p>
+          </div>
+          <div class="grid" id="musicGrid"><!-- cards injected by script --></div>
+        </div>
+      </section>
+
+      <!-- ============ VIDEOS ============ -->
+      <section class="videos" id="videos">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="rule"></div>
+            <h2>The Videos</h2>
+            <p>Story films are half of this band. Start with the 58-second Anubis morph — the clip that scores “No Decision.”</p>
+          </div>
+
+          <figure class="vid vid-feature">
+            <video controls preload="none" poster="assets/asset-003.jpg" playsinline>
+              <source src="assets/asset-006.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              <h3>The Anubis Morph — official clip</h3>
+              <p>Highway to venue to the morph at the bus door, scored with “No Decision.” The bus wears the band's exact logo; the drummer wears his sleeve.</p>
+            </figcaption>
+          </figure>
+
+          <div class="vid-grid">
+            <figure class="vid">
+              <video controls preload="none" poster="assets/asset-007.jpg" playsinline>
+                <source src="assets/asset-008.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                <h3>The Anubis at the Gates</h3>
+                <p>&copy; 2026</p>
+              </figcaption>
+            </figure>
+            <figure class="vid">
+              <video controls preload="none" poster="assets/asset-009.jpg" playsinline>
+                <source src="assets/asset-010.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                <h3>Far from Home</h3>
+                <p>&copy; 2026</p>
+              </figcaption>
+            </figure>
+            <figure class="vid">
+              <video controls preload="none" poster="assets/asset-011.jpg" playsinline>
+                <source src="assets/asset-012.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                <h3>The Insurgent</h3>
+                <p>&copy; 2026</p>
+              </figcaption>
+            </figure>
+            <figure class="vid">
+              <video controls preload="none" poster="assets/asset-013.jpg" playsinline>
+                <source src="assets/asset-014.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                <h3>The Shield — Story Video</h3>
+                <p>&copy; 2026</p>
+              </figcaption>
+            </figure>
+            <figure class="vid">
+              <video controls preload="none" poster="assets/asset-015.jpg" playsinline>
+                <source src="assets/asset-016.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                <h3>The Shield — Lyric Video</h3>
+                <p>&copy; 2026</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="vid-duo">
+            <figure class="vid square">
+              <video controls preload="none" poster="assets/asset-017.jpg" playsinline>
+                <source src="assets/asset-018.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                <h3>House of Four Walls</h3>
+                <p>&copy; 2026</p>
+              </figcaption>
+            </figure>
+            <figure class="vid vertical">
+              <video controls preload="none" poster="assets/asset-019.jpg" playsinline>
+                <source src="assets/asset-020.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                <h3>The Mirror Morph — Short</h3>
+                <p>The 60-second mirror short — Robbie faces the attic mirror, and Anubis moves in the reflection. &copy; 2026</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about">
+        <div class="wrap about-grid">
+          <div class="reveal">
+            <img class="about-photo" src="assets/asset-021.jpg" alt="Robbie Rodriguez coming down the stage stairs in his black vest, drumsticks in one hand and his towel in the other, Trinity triskelion on his shirt" />
+          </div>
+          <div class="about-copy">
+            <div class="rule"></div>
+            <h2>The Drummer &amp; Founder</h2>
+            <p><strong>Robbie Rodriguez</strong> is the engine of RUAA; he is the drummer and the director behind the band&rsquo;s films. A <strong>USMC veteran</strong> who left the Marines to chase his dream as an on-air radio personality on <strong>93.3 WFLS</strong>, <strong>99.3 WYSK</strong>, and <strong>Thunder 104.5</strong> in Virginia. He has been involved in the music industry for over 30 years, including writing for two industry magazines and as an artist manager. He is CEO of <strong>Canales Music Management Group, LLC</strong>, which also owns <strong>Trinity Cymbals</strong>, a boutique drum cymbal company.</p>
+            <blockquote class="bio-quote">&ldquo;I fell into drumming at an early age back in the Bronx at the age of 16. I took lessons from Grammy &amp; Latin Grammy nominee Bobby Sanabria in New York. Since then, I&rsquo;ve supported multiple artists and genres on multiple stages throughout the years. I enjoy playing all genres of music.&rdquo;</blockquote>
+            <p>Robbie plays bass guitar, produces, arranges, composes, and writes all lyrics to bring RUAA to life. He has been working on this project for over eight years; he also loves being behind the kit, assisting with other projects. He has toured as the drum technician for Drummer Dave Chavarri, founder of ILL Nino, and the horror metal band Terror Universal. He has also toured and played drums in Nashville and Virginia, playing gigs opening for country artists like Radio Romance, Ashley McBryde, and The Davidson Brothers. He has toured up north in New York with Freestyle artist Tonasia; in Baltimore, he worked with dance artist Eva Jade London for Noise In the Basement 98 Rock &amp; a live performance on Ocean 98.1 FM in Ocean City, Maryland.</p>
+            <p><strong>2026:</strong> He is currently hiring musicians to assist with studio and production. We&rsquo;re working to secure the core musicians to head out next year in 2027 for some touring dates moving forward. We&rsquo;d like to thank our personal assistant, Pip, who has been instrumental behind the scenes. Robbie would like to thank his spouse, <strong>Lynn Rodriguez</strong>, who is also his business partner, and show tech for her support.</p>
+            <div class="book-block" style="display:flex;gap:18px;align-items:flex-start;margin-top:18px;flex-wrap:wrap;">
+              <img src="assets/asset-049.jpg" alt="Cover of Unlocking Your Marketing Potential: The Science Behind Music Endorsements — The Guide, by Robert Rodriguez" style="width:168px;max-width:60vw;border-radius:8px;flex:0 0 auto;">
+              <div style="flex:1 1 260px;min-width:240px;">
+                <p>Robbie is also a published author. His ebook, Unlocking Your Marketing Potential: The Science Behind Music Endorsements — The Guide, written as Robert Rodriguez, is available on Amazon — a step-by-step process for partnering with great brands and growing together in business.</p>
+                <p>His road here was anything but straight. He holds a bachelor's in applied science in Administration of Justice from George Mason University and an associate in applied science from Northern Virginia Community College, and he completed his first year at Concord School of Law before walking away to chase music. His radio years also took him to 96.9 WWUZ, to BlogTalkRadio as Program Director of The Temple of Rock, and to his own online station, RockRadio993. He and his wife, Lynn, are parents to four adults and make their home in Spotsylvania, Virginia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bio-lists">
+          <div class="bio-list">
+            <h3>Endorsements</h3>
+            <ul class="cols-2">
+              <li>Scorpion Percussion</li>
+              <li>Solobeat Percussion</li>
+              <li>MotionProDrum Thrones</li>
+              <li>Trinity Cymbals</li>
+              <li>HHG Drums</li>
+              <li>WAVS Inner Ear Monitors</li>
+              <li>Pig Hog Cables</li>
+              <li>XS Energy Drinks</li>
+            </ul>
+          </div>
+          <div class="bio-list">
+            <h3>The Kit</h3>
+            <ul>
+              <li><b>Kits</b> — Three Mapex kits (Meridian 5 pc, Armory 7 pc, Mars 4 pc)</li>
+              <li><b>Snares</b> — HHG</li>
+              <li><b>Cymbals</b> — Trinity Projections Series</li>
+              <li><b>Hardware</b> — Gibraltar Spider Rack</li>
+              <li><b>Pedals</b> — DW 9000</li>
+            </ul>
+          </div>
+          <div class="bio-list band-card">
+            <h3>The Band — Live / Studio</h3>
+            <ul class="members">
+              <li class="member"><img src="assets/asset-022.jpg" alt="Antonio Acevedo live on stage, playing a sunburst Fender 5-string bass under green stage lights" loading="lazy" /><span><b>Antonio Acevedo</b> — Bass Guitars</span></li>
+              <li class="member"><img src="assets/asset-023.jpg" alt="Kevin Oriol live on stage, playing bass under red and blue lights with Marshall stacks behind him" loading="lazy" /><span><b>Kevin Oriol</b> — Bass Guitars</span></li>
+              <li class="member"><img src="assets/asset-024.jpg" alt="Grant King live on stage under pink and red lights, singing with his guitar in hand" loading="lazy" /><span><b>Grant King</b> — Guitarist</span></li>
+              <li class="member"><img src="assets/asset-025.jpg" alt="Kenny Saunders live on stage with his guitar under red lights" loading="lazy" /><span><b>Kenny Saunders</b> — Guitarist</span></li>
+              <li class="member"><img class="jimmy-face" src="assets/asset-026.jpg" alt="Jimmy Katone — black-and-white portrait from his RockEyez interview poster, long hair over one eye, chains at his neck and dark roses behind him" loading="lazy" /><span><b>Jimmy Katone</b> — Vocals</span></li>
+              <li class="member"><img class="face-frame" src="assets/asset-027.jpg" alt="Danielle Rodriguez — portrait headshot" loading="lazy" /><span><b>Danielle Rodriguez</b> — Female Vocals</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="prod-line">Sound / Lighting / Production: <a href="https://7virtuesentertainment.com" target="_blank" rel="noopener">7 Virtues Entertainment</a></p>
+        <figure class="hire-card">
+          <img src="assets/asset-028.png" alt="Robbie Rodriguez — Available for Hire. Independent drummer, session and touring. Drummer for RUAA, professional touring drummer, USMC veteran, owner of Trinity Cymbals. Bookings: Canales Music Management Group, canalesmusicmanagementgroup@gmail.com" loading="lazy" />
+        </figure>
+        <div class="audition">
+          <h3>RUAA Auditions — Musicians Wanted</h3>
+          <p>Robbie is currently hiring musicians for studio and production work ahead of 2027 touring dates. Watch the audition call below, then get in touch through <a href="#booking">CMMG booking</a> — canalesmusicmanagementgroup@gmail.com.</p>
+          <div class="yt-wrap">
+            <iframe src="https://www.youtube.com/embed/mCZOaD5PoxM" title="RUAA Auditions — Musicians Wanted" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+        <figure class="band-shot">
+          <img src="assets/asset-029.jpg" alt="The full RUAA lineup on an arena stage — guitarist, Robbie with his sticks at center, the singer at the mic and the bassist — with the band's white gothic logo in the corner" loading="lazy" />
+          <figcaption>The full band on the arena stage — Robbie at the kit, center, sticks in hand.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ============ GALLERY ============ -->
+      <section class="gallery" id="gallery">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="rule"></div>
+            <h2>Gallery</h2>
+            <p>The bus, the kit, the mirror — RUAA's world in frames.</p>
+          </div>
+          <figure class="gal-banner">
+            <img src="assets/asset-030.jpg" alt="The black RUAA tour bus rolling down a highway at sunset, the band's white gothic logo across its rear third" />
+            <figcaption><b>On the road</b> — the RUAA bus at sunset, logo on the rear third.</figcaption>
+          </figure>
+          <div class="gal-grid">
+            <figure class="reveal">
+              <img src="assets/asset-031.jpg" alt="The RUAA bus parked outside a theater under a marquee reading Tonight Live Sold Out" />
+              <figcaption>Tonight · Live · Sold Out — the bus at the venue.</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img src="assets/asset-032.jpg" alt="Robbie on the stage stairs with his black-and-grey tattoo sleeve — RUAA lettering under a full moon — on his right arm" />
+              <figcaption>The sleeve: RUAA lettering under a full moon.</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img src="assets/asset-033.jpg" alt="Robbie in profile before a gold-framed attic mirror, where the jackal-headed Anubis looks back at him" />
+              <figcaption>The attic mirror — Anubis looks back.</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img src="assets/asset-034.jpg" alt="Robbie's actual black drum kit on stage, front view — the white Trinity triskelion logo on the bass drum head" loading="lazy" />
+              <figcaption>His kit on stage — the Trinity triskelion rides the bass drum head.</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img src="assets/asset-035.jpg" alt="Top-down view of Robbie's tour kit — black shells, gold snare and Trinity cymbals, captioned My tour kit" loading="lazy" />
+              <figcaption>My tour kit — from above.</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img src="assets/asset-036.jpg" alt="Robbie Rodriguez live behind his drum kit under green stage lights, sticks in hand, surrounded by his Trinity cymbals" loading="lazy" />
+              <figcaption>Live behind the kit.</figcaption>
+            </figure>
+            <figure class="reveal wide">
+              <img src="assets/asset-037.jpg" alt="Trinity Cymbals trade-show booth — two Trinity backdrops with the white triskelion logo, cymbal display stands, a Trinity-logo table, and artist banners for Dave Simmons and Jimmy Katone" loading="lazy" />
+              <figcaption>Trinity Cymbals booth — Robbie's boutique cymbal company on display, with artist banners for Dave Simmons and Jimmy Katone.</figcaption>
+            </figure>
+          </div>
+          <div class="gal-sub reveal">
+            <h3>Trinity Cymbals</h3>
+            <p>Robbie's boutique cymbal company — home of the Projections Series on his kit, and a booth that works the drum expos. Veteran owned, woman owned, minority owned. <a href="https://www.trinitycymbals.com" target="_blank" rel="noopener">trinitycymbals.com</a></p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============ BOOKING ============ -->
+      <section id="booking">
+        <div class="wrap">
+          <div class="book-card">
+            <div class="cmmg-badge">
+              <img src="assets/asset-038.png" alt="CMMG — Canales Music Management Group logo" />
+            </div>
+            <div>
+              <h2>Book RUAA</h2>
+              <p>All booking and management runs through Canales Music Management Group LLC. One email reaches the band — dates, sessions and appearances.</p>
+            </div>
+            <div class="book-actions">
+              <a class="btn btn-gold" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=canalesmusicmanagementgroup@gmail.com&amp;su=Booking%20RUAA&amp;body=Hi%20CMMG%2C%0A%0AI%27d%20like%20to%20book%20RUAA.%0A%0AEvent%20date%3A%0AVenue%20%2F%20city%3A%0ADetails%3A%0A" target="_blank" rel="noopener">Email CMMG in Gmail</a>
+              <button class="btn btn-outline" id="copyEmail" type="button">Copy email address</button>
+              <span class="mail">canalesmusicmanagementgroup@gmail.com</span>
+              <span class="copy-note" id="copyNote" role="status" aria-live="polite">Tap &ldquo;Email CMMG in Gmail&rdquo; to open a new message in your Gmail, addressed and ready to send — or copy the address and paste it into your own mail app.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-in">
+          <img class="footer-logo" src="assets/asset-001.png" alt="RUAA logo" />
+          <div class="footer-cols">
+            <div>
+              <h4>Site</h4>
+              <ul>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#about">The Drummer</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#booking">Booking</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Follow</h4>
+              <ul>
+                <li><a href="https://www.youtube.com/@CanalesMusicManagementGroup" target="_blank" rel="noopener">CMMG on YouTube</a></li>
+                <li><a href="https://www.instagram.com/robbie_rodriguez_drums" target="_blank" rel="noopener">Robbie on Instagram</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Credits</h4>
+              <ul>
+                <li>Band — RUAA</li>
+                <li>Record company — CMMG Records</li>
+                <li>Management — Canales Music Management Group LLC</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-base">
+          <span>© 2026 CMMG Records</span>
+          <span>Drums — Robbie Rodriguez</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded photo" hidden>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close expanded photo">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16"/></svg>
+      </button>
+      <figure>
+        <img id="lightboxImg" alt="" />
+        <figcaption id="lightboxCap"></figcaption>
+      </figure>
+      <div class="lightbox-hint">Tap anywhere or press Esc to close</div>
+    </div>
+
+    <script>
+      /* ---------- Release data (from the band's own catalog) ---------- */
+      var RELEASES = [
+        { id: "nodecision", title: "No Decision", kind: "Instrumental single", dur: "2:47", secs: 167,
+          tag: "Coming soon", solid: true, cover: "assets/asset-004.jpg", audio: "assets/asset-005.mp3",
+          alt: "No Decision cover art — Anubis in gold and black holding crossed staffs",
+          note: "The track takes you on a musical journey to decide who or what we'd like to achieve in life. We're making No Decision as we move through time and space to get to our final destination — no words, just kit, riff and atmosphere, scored to the Anubis morphing." },
+        { id: "anubis", title: "The Anubis at the Gates", kind: "Instrumental single", dur: "3:53", secs: 233,
+          tag: "Full-length film", solid: false, cover: "assets/asset-039.jpg", audio: "assets/asset-040.mp3",
+          alt: "The Anubis at the Gates cover art — Robbie facing an attic mirror where Anubis looks back",
+          note: "A drummer faces the mirror, and Anubis faces him back." },
+        { id: "insurgent", title: "The Insurgent", kind: "Instrumental single", dur: "2:26", secs: 146,
+          tag: "Out now", solid: false, cover: "assets/asset-041.jpg", audio: "assets/asset-042.mp3",
+          alt: "The Insurgent cover art",
+          centerNote: true,
+          note: "It's our time, we move as one." },
+        { id: "far", title: "Far from Home", kind: "Single", dur: "4:29", secs: 269,
+          tag: "Cinematic video", solid: false, cover: "assets/asset-043.jpg", audio: "assets/asset-044.mp3",
+          alt: "Far from Home cover art",
+          note: "The one that started the films — a full cinematic video, directed by Robbie Rodriguez." },
+        { id: "house", title: "House of Four Walls", kind: "Single", dur: "3:05", secs: 185,
+          tag: "Single", solid: false, cover: "assets/asset-017.jpg", audio: "assets/asset-045.mp3",
+          alt: "House of Four Walls cover art — a lone man in a bare, cracked room",
+          note: "One man, one bare room, four walls closing in." },
+        { id: "altar", title: "Step Up To The Altar", kind: "Single", dur: "3:03", secs: 183,
+          tag: "Lyric video", solid: false, cover: "assets/asset-046.jpg", audio: "assets/asset-047.mp3",
+          alt: "Step Up To The Altar cover art",
+          note: "The black bus rolls through the lyric video, logo flashing tattered and static-worn." },
+        { id: "shield", title: "The Shield", kind: "Single", dur: "3:23", secs: 203,
+          tag: "Story + lyric video", solid: false, cover: "assets/asset-015.jpg", audio: "assets/asset-048.mp3",
+          alt: "The Shield cover art — the band beneath a giant lit cross in an arena, crowd in silhouette",
+          note: "Eight Marines behind enemy lines, and a church that gives them hope. The cover is a frame from the film." }
+      ];
+
+      var grid = document.getElementById("musicGrid");
+      RELEASES.forEach(function (r) {
+        var card = document.createElement("article");
+        card.className = "card";
+        card.innerHTML =
+          '<img class="cover" src="' + r.cover + '" alt="' + r.alt + '" />' +
+          '<div class="card-body">' +
+            '<h3>' + r.title + '</h3>' +
+            '<div class="meta"><span>' + r.kind + '</span><span class="dot"></span><span>' + r.dur + '</span>' +
+            '<span style="margin-left:auto"><span class="tag' + (r.solid ? " solid" : "") + '">' + r.tag + '</span></span></div>' +
+            '<p class="note' + (r.centerNote ? ' centered' : '') + '">' + r.note + '</p>' +
+          '</div>' +
+          '<div class="player" data-player>' +
+            '<button class="pbtn" type="button" aria-label="Play ' + r.title + '">' +
+              '<svg class="icon-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg>' +
+              '<svg class="icon-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 1.5h4v13h-4zM9.5 1.5h4v13h-4z"/></svg>' +
+            '</button>' +
+            '<div class="track">' +
+              '<div class="bar" role="slider" aria-label="Seek in ' + r.title + '" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><i></i></div>' +
+              '<div class="time"><span class="cur">0:00</span><span class="dur">' + r.dur + '</span></div>' +
+            '</div>' +
+            '<audio preload="none" src="' + r.audio + '"></audio>' +
+          '</div>';
+        grid.appendChild(card);
+      });
+
+      /* ---------- Players: one track at a time ---------- */
+      function fmt(s) {
+        if (!isFinite(s)) s = 0;
+        s = Math.max(0, Math.floor(s));
+        return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2);
+      }
+      var players = Array.prototype.slice.call(document.querySelectorAll("[data-player]"));
+      function stopOthers(active) {
+        players.forEach(function (p) {
+          if (p === active) return;
+          var a = p.querySelector("audio");
+          if (a && !a.paused) a.pause();
+          p.classList.remove("playing");
+          var b = p.querySelector(".pbtn");
+          if (b) b.setAttribute("aria-label", b.getAttribute("aria-label").replace("Pause", "Play"));
+        });
+      }
+      players.forEach(function (p) {
+        var audio = p.querySelector("audio");
+        var btn = p.querySelector(".pbtn");
+        var fill = p.querySelector(".bar i");
+        var bar = p.querySelector(".bar");
+        var cur = p.querySelector(".cur");
+        var dur = p.querySelector(".dur");
+        var baseLabel = btn.getAttribute("aria-label");
+        btn.addEventListener("click", function () {
+          if (audio.paused) { stopOthers(p); audio.play(); }
+          else audio.pause();
+        });
+        audio.addEventListener("play", function () {
+          p.classList.add("playing");
+          btn.setAttribute("aria-label", baseLabel.replace("Play", "Pause"));
+        });
+        audio.addEventListener("pause", function () {
+          p.classList.remove("playing");
+          btn.setAttribute("aria-label", baseLabel);
+        });
+        audio.addEventListener("timeupdate", function () {
+          if (audio.duration) {
+            var pct = (audio.currentTime / audio.duration) * 100;
+            fill.style.width = pct + "%";
+            bar.setAttribute("aria-valuenow", Math.round(pct));
+          }
+          cur.textContent = fmt(audio.currentTime);
+        });
+        audio.addEventListener("loadedmetadata", function () { dur.textContent = fmt(audio.duration); });
+        audio.addEventListener("ended", function () {
+          p.classList.remove("playing");
+          fill.style.width = "0%"; cur.textContent = "0:00";
+        });
+        function seek(clientX) {
+          if (!audio.duration) return;
+          var r = bar.getBoundingClientRect();
+          var ratio = (clientX - r.left) / r.width;
+          ratio = Math.min(1, Math.max(0, ratio));
+          audio.currentTime = ratio * audio.duration;
+        }
+        bar.addEventListener("click", function (e) { seek(e.clientX); });
+        bar.addEventListener("keydown", function (e) {
+          if (!audio.duration) return;
+          if (e.key === "ArrowRight") { audio.currentTime = Math.min(audio.duration, audio.currentTime + 10); e.preventDefault(); }
+          if (e.key === "ArrowLeft") { audio.currentTime = Math.max(0, audio.currentTime - 10); e.preventDefault(); }
+        });
+        p._audio = audio;
+      });
+
+      /* Hero strip play button drives the spotlight player */
+      var heroPlay = document.getElementById("heroPlay");
+      var spotPlayer = document.querySelector(".spotlight [data-player]");
+      heroPlay.addEventListener("click", function () {
+        document.getElementById("latest").scrollIntoView({ behavior: "smooth", block: "center" });
+        if (spotPlayer && spotPlayer._audio) {
+          if (spotPlayer._audio.paused) { stopOthers(spotPlayer); spotPlayer._audio.play(); }
+        }
+      });
+
+      /* Only one video plays at a time, too */
+      var vids = Array.prototype.slice.call(document.querySelectorAll("video"));
+      vids.forEach(function (v) {
+        v.addEventListener("play", function () {
+          vids.forEach(function (o) { if (o !== v && !o.paused) o.pause(); });
+          players.forEach(function (p) { if (p._audio && !p._audio.paused) p._audio.pause(); });
+        });
+      });
+
+      /* ---------- Click-to-play: every video fires when clicked ---------- */
+      /* Each local video gets a full-area play button over its poster.
+         Clicking anywhere on the video area calls play() directly, so
+         starting a video never depends on hitting the browser's small
+         native play control (which some phone webviews swallow on the
+         first tap when preload="none"). Once playing, the button removes
+         itself and the native controls take over; if play() is ever
+         refused, the button still removes itself so the native controls
+         are reachable as a fallback. */
+      var playSvg = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg>';
+      vids.forEach(function (v) {
+        var fig = v.closest ? v.closest("figure") : null;
+        var titleEl = fig ? fig.querySelector("figcaption h3") : null;
+        var title = titleEl ? titleEl.textContent.trim() : "video";
+        var frame = document.createElement("div");
+        frame.className = "vid-frame";
+        v.parentNode.insertBefore(frame, v);
+        frame.appendChild(v);
+        /* Native controls stay hidden behind the poster until the first
+           click, so the poster shows one clear play target, not two. */
+        v.controls = false;
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "vid-play";
+        btn.setAttribute("aria-label", "Play video: " + title);
+        btn.innerHTML = '<span class="vid-play-disc">' + playSvg + '</span><span class="vid-play-text">Play video</span>';
+        frame.appendChild(btn);
+        function hideBtn() { btn.hidden = true; v.controls = true; }
+        btn.addEventListener("click", function () {
+          v.controls = true;
+          var promise = null;
+          try { promise = v.play(); } catch (e) { promise = null; }
+          if (promise && promise.then) {
+            promise.then(hideBtn, hideBtn);
+          } else {
+            hideBtn();
+          }
+        });
+        v.addEventListener("play", hideBtn);
+        /* Offer a one-click replay once a video finishes. */
+        v.addEventListener("ended", function () { btn.hidden = false; });
+      });
+
+      /* The YouTube auditions video becomes click-to-load: the embed iframe
+         is created only when the visitor clicks, with autoplay on, so that
+         click is what starts it playing. */
+      var ytWrap = document.querySelector(".yt-wrap");
+      var ytIframe = ytWrap ? ytWrap.querySelector("iframe") : null;
+      if (ytWrap && ytIframe) {
+        var ytMatch = (ytIframe.getAttribute("src") || "").match(/\/embed\/([^?&#/]+)/);
+        if (ytMatch) {
+          var ytId = ytMatch[1];
+          var ytBtn = document.createElement("button");
+          ytBtn.type = "button";
+          ytBtn.className = "yt-facade";
+          ytBtn.setAttribute("aria-label", "Play video: RUAA Auditions — Musicians Wanted");
+          ytBtn.innerHTML =
+            '<span><span class="vid-play-disc">' + playSvg + '</span>' +
+            '<span class="yt-facade-title">RUAA Auditions — Musicians Wanted</span>' +
+            '<span class="yt-facade-sub">Play video</span></span>';
+          ytWrap.replaceChild(ytBtn, ytIframe);
+          ytBtn.addEventListener("click", function () {
+            var f = document.createElement("iframe");
+            f.src = "https://www.youtube.com/embed/" + ytId + "?autoplay=1&rel=0&playsinline=1";
+            f.title = "RUAA Auditions — Musicians Wanted";
+            f.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+            f.setAttribute("allowfullscreen", "");
+            f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+            ytWrap.replaceChild(f, ytBtn);
+          });
+        }
+      }
+
+      /* ---------- Theater (Expand): every video can fill the page ---------- */
+      /* The host share frame refuses true fullscreen, so Expand switches
+         the video's host to a fixed full-viewport stage in-page. Playback,
+         position, and native controls are untouched — only size changes.
+         The YouTube audition gets the same treatment via a host wrapper
+         around its embed, so its Expand button survives the click-to-load
+         swap from facade to iframe. Esc or the Shrink button exits, and
+         only one video can be expanded at a time. */
+      var expandSvg = '<svg class="icon-expand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H4v5M20 9V4h-5M15 20h5v-5M4 15v5h5"/></svg>';
+      var shrinkSvg = '<svg class="icon-shrink" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h5V4M15 4v5h5M20 15h-5v5M9 20v-5H4"/></svg>';
+      var theaterState = null;
+
+      function exitTheater() {
+        if (!theaterState) return;
+        var state = theaterState;
+        theaterState = null;
+        state.host.classList.remove("theater");
+        if (state.placeholder && state.placeholder.parentNode) {
+          state.placeholder.parentNode.removeChild(state.placeholder);
+        }
+        document.body.classList.remove("theater-open");
+        state.btn.setAttribute("aria-expanded", "false");
+        state.btn.setAttribute("aria-label", state.expandLabel);
+        state.btn.querySelector(".theater-btn-label").textContent = "Expand";
+      }
+
+      function enterTheater(host, btn) {
+        var placeholder = document.createElement("div");
+        placeholder.className = "theater-placeholder";
+        placeholder.setAttribute("aria-hidden", "true");
+        placeholder.style.height = host.offsetHeight + "px";
+        host.parentNode.insertBefore(placeholder, host);
+        theaterState = {
+          host: host, btn: btn, placeholder: placeholder,
+          expandLabel: btn.getAttribute("aria-label")
+        };
+        host.classList.add("theater");
+        document.body.classList.add("theater-open");
+        btn.setAttribute("aria-expanded", "true");
+        btn.setAttribute("aria-label", btn.getAttribute("aria-label").replace("Expand", "Shrink"));
+        btn.querySelector(".theater-btn-label").textContent = "Shrink";
+      }
+
+      function makeTheaterButton(host, title) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "theater-btn";
+        btn.setAttribute("aria-expanded", "false");
+        btn.setAttribute("aria-label", "Expand video: " + title);
+        btn.innerHTML = expandSvg + shrinkSvg + '<span class="theater-btn-label">Expand</span>';
+        btn.addEventListener("click", function () {
+          if (theaterState && theaterState.host === host) exitTheater();
+          else { exitTheater(); enterTheater(host, btn); }
+        });
+        return btn;
+      }
+
+      /* Local videos: the button lives in the figcaption, below the frame,
+         so it stays reachable before, during, and after playback — and
+         rides along inside the caption bar while expanded. */
+      Array.prototype.slice.call(document.querySelectorAll("figure.vid")).forEach(function (fig) {
+        var cap = fig.querySelector("figcaption");
+        if (!cap) return;
+        var titleEl = cap.querySelector("h3");
+        var title = titleEl ? titleEl.textContent.trim() : "video";
+        var actions = document.createElement("div");
+        actions.className = "vid-actions";
+        actions.appendChild(makeTheaterButton(fig, title));
+        cap.appendChild(actions);
+      });
+
+      /* YouTube auditions embed: wrap the embed plus its button in one
+         host, so expanding carries the frame and the Shrink control. */
+      if (ytWrap && ytWrap.parentNode) {
+        var ytHost = document.createElement("div");
+        ytHost.className = "yt-theater-host";
+        ytWrap.parentNode.insertBefore(ytHost, ytWrap);
+        ytHost.appendChild(ytWrap);
+        var ytActions = document.createElement("div");
+        ytActions.className = "vid-actions";
+        ytActions.appendChild(makeTheaterButton(ytHost, "RUAA Auditions — Musicians Wanted"));
+        ytHost.appendChild(ytActions);
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && theaterState) exitTheater();
+      });
+
+      /* ---------- Booking: make "Book RUAA" always reach the card ---------- */
+      /* Hash links can be swallowed inside an embedded preview, so wire
+         every #booking link to scroll the card into view explicitly. */
+      Array.prototype.slice.call(document.querySelectorAll('a[href="#booking"]')).forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          var target = document.getElementById("booking");
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          try { history.replaceState(null, "", "#booking"); } catch (err) {}
+        });
+      });
+
+      /* ---------- Booking: copy-email fallback ---------- */
+      /* The copy button always works in-page: it puts the CMMG address
+         on the clipboard and confirms it right under the buttons. */
+      var copyEmailBtn = document.getElementById("copyEmail");
+      var copyNote = document.getElementById("copyNote");
+      if (copyEmailBtn && copyNote) {
+        var cmmgEmail = "canalesmusicmanagementgroup@gmail.com";
+        function noteCopied() {
+          copyNote.textContent = "Copied — " + cmmgEmail + " is on your clipboard. Paste it into your mail app to write to CMMG.";
+          copyNote.classList.add("ok");
+        }
+        function noteFailed() {
+          copyNote.textContent = "Copy didn't work in this browser — press and hold (or select) the address above to copy it by hand.";
+          copyNote.classList.remove("ok");
+        }
+        copyEmailBtn.addEventListener("click", function () {
+          function fallbackCopy() {
+            var ta = document.createElement("textarea");
+            ta.value = cmmgEmail;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            var ok = false;
+            try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+            document.body.removeChild(ta);
+            return ok;
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(cmmgEmail).then(noteCopied, function () {
+              if (fallbackCopy()) noteCopied(); else noteFailed();
+            });
+          } else if (fallbackCopy()) {
+            noteCopied();
+          } else {
+            noteFailed();
+          }
+        });
+      }
+
+      /* ---------- Lightbox: click any photo to see it full-size, uncropped ---------- */
+      var lightbox = document.getElementById("lightbox");
+      var lightboxImg = document.getElementById("lightboxImg");
+      var lightboxCap = document.getElementById("lightboxCap");
+      var lightboxClose = document.getElementById("lightboxClose");
+      var lastFocus = null;
+
+      function captionFor(img) {
+        var fig = img.closest ? img.closest("figure") : null;
+        if (fig) {
+          var cap = fig.querySelector("figcaption");
+          if (cap && cap.textContent.trim()) return cap.textContent.trim();
+        }
+        var item = img.closest ? img.closest("li") : null;
+        if (item) {
+          var label = item.querySelector("span");
+          if (label && label.textContent.trim()) return label.textContent.trim();
+        }
+        var card = img.closest ? img.closest(".card") : null;
+        if (card) {
+          var title = card.querySelector("h3");
+          if (title && title.textContent.trim()) return title.textContent.trim();
+        }
+        var alt = img.getAttribute("alt") || "";
+        /* Very long alt text (e.g. the hire card's full transcription) reads
+           badly as a caption — skip it and show the photo alone. */
+        return alt.length <= 200 ? alt : "";
+      }
+
+      function openLightbox(img) {
+        lastFocus = img;
+        lightboxImg.src = img.currentSrc || img.src;
+        lightboxImg.alt = img.getAttribute("alt") || "";
+        lightboxCap.textContent = captionFor(img);
+        lightbox.hidden = false;
+        /* Force a reflow so the open animation runs after un-hiding. */
+        void lightbox.offsetWidth;
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+        lightboxClose.focus();
+      }
+
+      function closeLightbox() {
+        if (lightbox.hidden) return;
+        lightbox.classList.remove("open");
+        lightbox.hidden = true;
+        lightboxImg.removeAttribute("src");
+        document.body.style.overflow = "";
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+        lastFocus = null;
+      }
+
+      var expandableSelectors = [
+        ".spot-cover",
+        "#musicGrid .cover",
+        ".about-photo",
+        ".bio-list li.member img",
+        ".hire-card img",
+        ".band-shot img",
+        ".gal-banner img",
+        ".gal-grid img"
+      ];
+      var expandables = Array.prototype.slice.call(
+        document.querySelectorAll(expandableSelectors.join(","))
+      );
+      expandables.forEach(function (img) {
+        img.classList.add("expandable");
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("role", "button");
+        var name = captionFor(img) || img.getAttribute("alt") || "photo";
+        img.setAttribute("aria-label", "Enlarge photo: " + name);
+        img.setAttribute("title", "Click to enlarge");
+        img.addEventListener("click", function () { openLightbox(img); });
+        img.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(img); }
+        });
+      });
+
+      /* Clicking anywhere on the overlay (backdrop, photo, or button) closes it. */
+      lightbox.addEventListener("click", function () { closeLightbox(); });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+      });
+
+    </script>
+  </body>
+</html>
